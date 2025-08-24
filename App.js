@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { AppBar } from '@react-native-material/core';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { Playground } from './app/Playground.view';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView spacing={5} style={styles.container}>
+      <AppBar style={{"backgroundColor":"#57d1b7ff"}} title="Rock, Paper, Scissors" />
+      <Playground />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
